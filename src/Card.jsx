@@ -1,14 +1,9 @@
-import React from 'react'
+//Este componente deverá receber dados por Props e mostrar as Informações em Tela
 
-//Este componente deberia recibir por props y mostrar en pantalla la informacion
-//que envia el usuario 
-
-const Card = () => {
+export function Card () {
   return (
     <div>
-      
+
     </div>
   )
 }
-
-export default Card

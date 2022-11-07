@@ -1,19 +1,18 @@
 
-//Aqui deberias escribir tus funciones de validacion
-
+// Aqui você irá escrever as suas funções de Validação, para verificar se o Formulário foi preenchido corretamente
 
 function App() {
-  //Aqui deberias agregar los estados y los handlers para los inputs
+  // Aqui você irá criar os Estados para manipular os Inputs
 
 
   return (
     <div className="App">
      <h1>Carga de estudiantes</h1>
      <form>
-      {/* aqui deberias comenzar a escribir tu codigo */}
+      {/* Comece a desenvolver o seu Código por aqui :) */}
      </form>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

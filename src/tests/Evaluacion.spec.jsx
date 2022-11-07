@@ -25,10 +25,10 @@ describe("First exam Front III", ()=>{
                     userEvent.type(inputs[1], "Digital1234")
                     userEvent.click(submitButton)
 
-                    const errorMessage = await screen.findByText("Please check your information again")
+                    const errorMessage = await screen.findByText("Por favor, verifique os dados inseridos no formulário")
                     const cardText1 = screen.queryByText("DH")
                     expect(errorMessage).toBeInTheDocument()
-                    expect(cardText1).not.toBeInTheDocument() 
+                    expect(cardText1).not.toBeInTheDocument()
                 })
                 it("If the first input contains blank spaces at the beginning", async ()=>{
                     render(<App/>)
@@ -38,10 +38,10 @@ describe("First exam Front III", ()=>{
                     userEvent.type(inputs[1], "Digital1234")
                     userEvent.click(submitButton)
 
-                    const errorMessage = await screen.findByText("Please check your information again")
+                    const errorMessage = await screen.findByText("Por favor, verifique os dados inseridos no formulário")
                     const cardText1 = screen.queryByText("   DH")
                     expect(errorMessage).toBeInTheDocument()
-                    expect(cardText1).not.toBeInTheDocument() 
+                    expect(cardText1).not.toBeInTheDocument()
                 })
                 it("If the second input length is less than 6", async ()=>{
                     render(<App/>)
@@ -51,10 +51,10 @@ describe("First exam Front III", ()=>{
                     userEvent.type(inputs[1], "code")
                     userEvent.click(submitButton)
 
-                    const errorMessage = await screen.findByText("Please check your information again")
+                    const errorMessage = await screen.findByText("Por favor, verifique os dados inseridos no formulário")
                     const cardText1 = screen.queryByText("Just testing")
                     expect(errorMessage).toBeInTheDocument()
-                    expect(cardText1).not.toBeInTheDocument() 
+                    expect(cardText1).not.toBeInTheDocument()
                 })
                 it("If the second input does not contains any numbers", async ()=>{
                     render(<App/>)
@@ -64,10 +64,10 @@ describe("First exam Front III", ()=>{
                     userEvent.type(inputs[1], "code")
                     userEvent.click(submitButton)
 
-                    const errorMessage = await screen.findByText("Please check your information again")
+                    const errorMessage = await screen.findByText("Por favor, verifique os dados inseridos no formulário")
                     const cardText1 = screen.queryByText("Just testing")
                     expect(errorMessage).toBeInTheDocument()
-                    expect(cardText1).not.toBeInTheDocument() 
+                    expect(cardText1).not.toBeInTheDocument()
                 })
             })
         })
@@ -80,13 +80,13 @@ describe("First exam Front III", ()=>{
                 userEvent.type(inputs[0], "Just testing")
                 userEvent.type(inputs[1], "Digital1234")
                 userEvent.click(submitButton)
-                
+
                 const cardText1 = await screen.findByText(/Just testing/)
                 const cardText2 = await screen.findByText(/Digital1234/)
-                const errorMessage = screen.queryByText("Please check your information again")
-                expect(cardText1).toBeInTheDocument() 
-                expect(cardText2).toBeInTheDocument() 
-                expect(errorMessage).not.toBeInTheDocument() 
+                const errorMessage = screen.queryByText("Por favor, verifique os dados inseridos no formulário")
+                expect(cardText1).toBeInTheDocument()
+                expect(cardText2).toBeInTheDocument()
+                expect(errorMessage).not.toBeInTheDocument()
             })
          })
     })
