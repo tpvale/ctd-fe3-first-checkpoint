@@ -18,7 +18,7 @@ function App() {
       color: colorName,
     }
 
-    if (cardName === '' && colorName === '') {
+    if (cardName.length < 3 || colorName === '') {
       setFormularioErro(true)
     } else {
       setFormularioErro(false)
@@ -27,8 +27,9 @@ function App() {
 
       setCardName('')
       setColorName('')
-
     }
+
+    console.log(newCard)
   }
 
 
@@ -46,7 +47,7 @@ function App() {
 
           <div>
             <label htmlFor="colorName">Código Hexa da Cor</label>
-            <input id="colorName" type="text" value={colorName} onChange={event => setColorName(event.target.value)}/>
+            <input id="colorName" type="color" value={colorName} onChange={event => setColorName(event.target.value)}/>
           </div>
 
           <button type='submit'>Adicionar Cor</button>
