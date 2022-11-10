@@ -1,6 +1,6 @@
 .card {
   width: calc(32% - 12px);
-  border: 1px solid #202020;
+  border: 1px solid #ffffff;
   border-radius: 12px;
   overflow: hidden;
   transition: .2s ease-in-out;
@@ -21,7 +21,6 @@
 
       span {
           color: #FF0000;
-
       }
 
   }
